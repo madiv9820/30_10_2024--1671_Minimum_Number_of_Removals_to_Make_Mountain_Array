@@ -6,7 +6,8 @@ class UnitTest(unittest.TestCase):
     def setUp(self):
         self.testCases = {
             1: ([1,3,1], 0),
-            2: ([2,1,1,5,6,2,3,1], 3)    
+            2: ([2,1,1,5,6,2,3,1], 3),
+            3: ([100,92,89,77,74,66,64,66,64], 6)
         }
         self.obj = Solution()
         return super().setUp()
@@ -21,6 +22,13 @@ class UnitTest(unittest.TestCase):
     @timeout(0.5)
     def test_Case2(self):
         nums, output = self.testCases[2]
+        result = self.obj.minimumMountainRemovals(nums = nums)
+        self.assertIsInstance(result, int)
+        self.assertEqual(result, output)
+
+    @timeout(0.5)
+    def test_Case3(self):
+        nums, output = self.testCases[3]
         result = self.obj.minimumMountainRemovals(nums = nums)
         self.assertIsInstance(result, int)
         self.assertEqual(result, output)
