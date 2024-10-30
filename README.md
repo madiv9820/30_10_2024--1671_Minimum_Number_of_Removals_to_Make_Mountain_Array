@@ -1,0 +1,1 @@
+# 30_10_2024--1671_Minimum_Number_of_Removals_to_Make_Mountain_Array
